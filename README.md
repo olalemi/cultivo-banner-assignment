@@ -1,8 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cultivo - take home programming assignment
+
+## Instructions
+
+The task is to build a responsive banner / card. The design is available in Figma [here](https://www.figma.com/file/HrbZ3oB1inqZuAi9VVdQb4/CTA-Banner?type=design&node-id=1%3A9&mode=design&t=wNbdC14RMG5QaNSk-1). If you cannot access this then please ask your Cultivo contact ASAP - you cannot complete the assignment without the design.
+
+![banner screenshot](./design/banner-screenshot.png)
+
+1. Fork this repository to your own GitHub account.
+2. Implement the component and include it in `app/page.tsx`
+3. Commit and push all changes to your fork.
+4. Reply by email to your Cultivo contact person:
+  * Include a link to your forked repository
+  * No need to implement this, but please explain in as much detail as possible how we could extend the solution so that:
+    * we send a Slack message to the team for the customer message
+    * instead of using local storage to keep track of whether the form was submitted we keep track of that server-side, so that the appropriate banner state is displayed no matter which device the user logs into
+
+#### Development notes
+* Implement this responsive banner as a TypeScript React component. **Code quality** and **pixel perfect execution** are equally important.
+* When the button is clicked display the `ContactFormDialog` component provided.
+* It may be relevant to know that this is just one of many possible banners on the platform - they would all follow the same style but use different text, imagery and button action.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+```bash
+npm install
+```
+
+Next, run the development server:
 
 ```bash
 npm run dev
@@ -18,9 +43,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 To learn more about Next.js, take a look at the following resources:
 
