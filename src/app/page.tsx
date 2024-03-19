@@ -1,6 +1,14 @@
 'use client'
 
-import { Box, Text, Flex, List, ListItem, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Text,
+  Flex,
+  List,
+  ListItem,
+  VStack,
+  Center,
+} from '@chakra-ui/react'
 import ButtonComponent from '../components/ButtonComponent'
 import Image from 'next/image'
 import vector from '../assets/icons/vector.svg'
@@ -8,7 +16,7 @@ import vector from '../assets/icons/vector.svg'
 
 export default function Home() {
   return (
-    <Box margin='0' padding={{ base: '20px', md: '0px' }}>
+    <Box padding={{ base: '20px', md: '0px' }}>
       <Flex
         justifyContent={'center'}
         mt={{ base: ' 20px', md: ' 300px  ' }}
@@ -17,7 +25,7 @@ export default function Home() {
         <Box
           backgroundColor={'blue'}
           borderRadius={{ base: '10px 10px 0px 0px', md: '10px 0px 0px 10px' }}
-          width={{ base: '373px' }}
+          width={{ base: '350px', md: '373px' }}
           height={{ base: '199px' }}
         >
           <Flex
@@ -57,19 +65,18 @@ export default function Home() {
         </Box>
 
         <Flex
-          direction={{ base: 'column',md:"row" }}
+          direction={{ base: 'column', md: 'row' }}
           backgroundColor='#003E49'
           padding={{ base: '20px' }}
           borderRadius={{ base: '0px 0px 10px 10px', md: '0px 10px 10px 0px' }}
-
         >
           <Box>
             <Text
               color='#fff'
               fontSize={{ base: '16px' }}
-              width={{ base: '350px' }}
               fontWeight={400}
               lineHeight='normal'
+              width={{ base: '279px', md: '483px' }}
               textAlign='left'
               mt={2}
             >
@@ -89,16 +96,17 @@ export default function Home() {
               <ListItem>An in-depth analysis of the site</ListItem>
               <ListItem>Recommendations of next steps to take</ListItem>
             </List>
+          </Box>
 
-        
-          </Box>
-          <Box mt='10px'>
-            <ButtonComponent
-              buttonText='Get in Touch'
-              buttonBackgroundColor='#ffff'
-              buttonColor='#008096'
-            />
-          </Box>
+          <Center>
+            <Box mt='10px'>
+              <ButtonComponent
+                buttonText='Get in Touch'
+                buttonBackgroundColor='#ffff'
+                buttonColor='#008096'
+              />
+            </Box>
+          </Center>
         </Flex>
       </Flex>
     </Box>

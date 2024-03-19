@@ -14,7 +14,7 @@ const ButtonComponent = ({
       <Button
         type="submit"
         fontSize={{ base: "16px", md: "18px" }}
-        width={{ base: "279px" }}
+        width={{ base: "248px" }}
         style={{
           backgroundColor: buttonBackgroundColor,
           color: buttonColor,

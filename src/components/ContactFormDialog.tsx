@@ -1,5 +1,6 @@
 'use client'
 
+import { Center } from '@chakra-ui/react'
 import SendIcon from '@mui/icons-material/Send'
 import {
   Button,
@@ -47,6 +48,9 @@ export const ContactFormDialog: React.FC<ContactFormDialogProps> = ({
         <Button variant='outlined' onClick={onClose}>
           Close
         </Button>
+
+        
+
         <Button
           variant='contained'
           onClick={onSendMessage}
@@ -54,6 +58,8 @@ export const ContactFormDialog: React.FC<ContactFormDialogProps> = ({
         >
           Send message
         </Button>
+     
+      
       </DialogActions>
     </Dialog>
   )
