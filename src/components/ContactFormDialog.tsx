@@ -23,6 +23,7 @@ export const ContactFormDialog: React.FC<ContactFormDialogProps> = ({
   onFormSubmitted,
 }) => {
   const [message, setMessage] = useState('')
+
   const onSendMessage = () => {
     onFormSubmitted(message)
     onClose()
@@ -40,6 +41,7 @@ export const ContactFormDialog: React.FC<ContactFormDialogProps> = ({
           rows={5}
           fullWidth
           value={message}
+          required
           onChange={(e) => setMessage(e.target.value)}
         />
       </DialogContent>
@@ -57,6 +59,5 @@ export const ContactFormDialog: React.FC<ContactFormDialogProps> = ({
         </Button>
       </DialogActions>
     </Dialog>
-
   )
 }

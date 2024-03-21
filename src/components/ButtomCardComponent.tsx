@@ -1,41 +1,34 @@
-import {
-  Box,
-  Text,
-  Flex,
-  ListItem,
-  List,
-  
-} from '@chakra-ui/react'
-const ButtomCardComponent = () => {
+import styles from '../app/page.module.css'
+
+type Props = {
+  isSubmit: boolean
+}
+
+const ButtomCardComponent = ({ isSubmit }: Props) => {
   return (
-    <Box>
-    <Text
-      color='#fff'
-      fontSize={{ base: '16px' }}
-      fontWeight={400}
-      lineHeight='normal'
-      width={{ base: '279px', md: '483px' }}
-      textAlign='left'
-      mt={2}
-      p="8px"
-    >
-      Please get in touch if you would like an expert report for this
-      site. Benefits include:
-    </Text>
-    <List
-      fontSize={{ base: '16px' }}
-      spacing={1}
-      listStyleType='disc'
-      color='white'
-      fontWeight={400}
-      mt='20px'
-      ml={'30px'}
-    >
-      <ListItem>Key insights from our expert team</ListItem>
-      <ListItem>An in-depth analysis of the site</ListItem>
-      <ListItem>Recommendations of next steps to take</ListItem>
-    </List>
-  </Box>
+    <div>
+      {isSubmit ? (
+        <div>
+          <p className={styles.text}>
+            We received your messge. Please feel free to get in touch again if
+            you would like to include any further details or ask any other
+            questions. We are eager to assist you.
+          </p>
+        </div>
+      ) : (
+        <div>
+          <p className={styles.text}>
+            Please get in touch if you would like an expert report for this
+            site. Benefits include:
+          </p>
+          <ul className={styles.text}>
+            <li>Key insights from our expert team</li>
+            <li>An in-depth analysis of the site</li>
+            <li>Recommendations of next steps to take</li>
+          </ul>
+        </div>
+      )}
+    </div>
   )
 }
 

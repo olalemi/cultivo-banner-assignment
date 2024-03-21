@@ -1,5 +1,6 @@
-import { Box, Button } from '@chakra-ui/react'
-type props = {
+import styles from '../app/page.module.css'
+
+type Props = {
   buttonText: string
   buttonColor: string
   buttonBackgroundColor: string
@@ -7,28 +8,15 @@ type props = {
 }
 const ButtonComponent = ({
   buttonText,
-  buttonColor,
-  buttonBackgroundColor,
+
   onClick,
-}: props) => {
+}: Props) => {
   return (
-    <Box>
-      <Button
-        type='submit'
-        fontSize={{ base: '16px', md: '18px' }}
-        width={{ base: '279px', md: '248px' }}
-        backgroundColor={buttonBackgroundColor}
-        color={buttonColor}
-        borderRadius='8px'
-        height='48px'
-        _hover={{
-          color: '#005563',
-          backgroundColor: '#E1F8FB',
-        }}
-      >
+    <div>
+      <button type='submit' className={styles.button} onClick={onClick}>
         {buttonText}
-      </Button>
-    </Box>
+      </button>
+    </div>
   )
 }
 
