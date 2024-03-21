@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import ButtonComponent from '../components/ButtonComponent'
 import TopCardComponent from '@/components/TopCardComponent'
 import ButtomCardComponent from '@/components/ButtomCardComponent'
@@ -10,26 +10,19 @@ export default function Home() {
   const [open, isOpen] = useState<boolean>(false)
   const [isSubmit, setIsSubmit] = useState<boolean>(false)
 
-
   useEffect(() => {
-    const savedIsSubmit = localStorage.getItem('isSubmitKey');
-    
+    const savedIsSubmit = localStorage.getItem('isSubmitKey')
+
     if (savedIsSubmit !== null) {
-      setIsSubmit(savedIsSubmit === 'true');
+      setIsSubmit(savedIsSubmit === 'true')
     }
-
-  }, []); 
+  }, [])
 
   useEffect(() => {
-    localStorage.setItem('isSubmitKey', isSubmit.toString());
-  }, [isSubmit]); 
-
-
-
+    localStorage.setItem('isSubmitKey', isSubmit.toString())
+  }, [isSubmit])
 
   const toggleModal = () => isOpen(!open)
-
-
 
   const handleFormSubmit = (message: string) => {
     console.log(message)
