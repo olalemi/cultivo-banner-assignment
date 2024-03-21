@@ -40,13 +40,13 @@ bun dev
 
 
 ## Setting up a Slack Webhook
-* Create a new Slack app in  Slack workspace.
-* Activate Incoming Webhooks from the Slack app settings.
-* Create a new Webhook URL and associate it with a channel in our Slack workspace where we want to receive the messages.
-* Modify handleFormSubmit function to make an HTTP request to  backend server instead of just logging the message. On the server side, we set up an endpoint to receive form submissions. This endpoint should validate the incoming data and then use the Slack Webhook URL to send the message to Slack channel. This can be done by making an HTTP POST request to the Webhook URL with a JSON payload containing the message text.
+### Create a new Slack app in  Slack workspace.
+### Activate Incoming Webhooks from the Slack app settings.
+### Create a new Webhook URL and associate it with a channel in our Slack workspace where we want to receive the messages.
+### Modify handleFormSubmit function to make an HTTP request to  backend server instead of just logging the message. On the server side, we set up an endpoint to receive form submissions. This endpoint should validate the incoming data and then use the Slack Webhook URL to send the message to Slack channel. This can be done by making an HTTP POST request to the Webhook URL with a JSON payload containing the message text.
 
 ## Setting up Database to track submission 
-* we set up a database to store submission states(banner state) associated with users. once form is submitted, database will be updated with submission state for user. React component will be modified to fetch submission state from the backend when component mounts instead of reading from local storage
+#### we set up a database to store submission states(banner state) associated with users. once form is submitted, database will be updated with submission state for user. React component will be modified to fetch submission state from the backend when component mounts instead of reading from local storage
 
 
 
